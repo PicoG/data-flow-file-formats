@@ -5,8 +5,9 @@ Here is an example of specifying the functional (non-cosmetic) parts of a LabVIE
 
 ![count_up.vi](https://user-images.githubusercontent.com/381432/180131978-fb41fa0a-55cf-4139-9be9-4c3918e6e050.png)
 
-[count_up.vi.yml](yml/count_up.vi.yml)
+> VSCode can validate and autocomplete YAML using a [json schema](https://json-schema.org/) file such as the [yml/vi_lint.json](https://github.com/PicoG/data-flow-file-formats/blob/main/yml/vi_lint.json) in this repository. ([see detailed instructions](https://dev.to/brpaz/how-to-create-your-own-auto-completion-for-json-and-yaml-files-on-vs-code-with-the-help-of-json-schema-k1i)).
 
+[count_up.vi.yml](yml/count_up.vi.yml)
 ```yaml
 # count_up.vi.yml
 #
