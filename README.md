@@ -3,6 +3,8 @@ Experimental work in possible file formats for storing data-flow programs.
 
 Here is an example of specifying the functional (non-cosmetic) parts of a LabVIEW VI (Virtual Instrument).
 
+![count_up.vi](https://user-images.githubusercontent.com/381432/180131978-fb41fa0a-55cf-4139-9be9-4c3918e6e050.png)
+
 [count_up.vi.yml](yml/count_up.vi.yml)
 
 ```yaml
