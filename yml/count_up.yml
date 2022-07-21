@@ -68,9 +68,9 @@ nodes:
         # While Loop's iteration terminal
         - type: loop_iteration
 
-        # A local variable of the "is_running" control
-        - type: read_local  # should read/write locals be different types?
-          control: is_running
+        # # A local variable of the "is_running" control
+        # - type: read_local  # should read/write locals be different types?
+        #   control: is_running
           
       wires:
 
