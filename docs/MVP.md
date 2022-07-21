@@ -37,3 +37,6 @@ Benefits:
 - Could allow committing VIs as YAML to git repo in a diffable text file format.
 - Could run this utility automatically on push to git repo (pre-commit hook on developer's machine)
 - Could run this in the cloud
+
+### Robust YAML libary for LabVIEW
+Not sure how robut the [nicolas_bats_lib_yaml_parser](https://www.vipm.io/package/nicolas_bats_lib_yaml_parser/)) library is. It would be great to have a more robust library for reading/writing YAML as the G YAML format and tools evolve.
