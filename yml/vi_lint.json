@@ -6,13 +6,12 @@
     "additionalProperties": false,
     "type": "object",
     "properties": {
-      "type": {
-        "description": "Type of VI",
-        "type": "array",
-        "items": {
+        "type": {
+            "description": "Type of VI",
             "type": "string",
-            "enum": ["virtual_instrument"]
-        }
+            "enum": [
+                "virtual_instrument"
+            ]
         },
         "name": {
             "description": "Name of VI",
@@ -21,12 +20,12 @@
         "execution": {
             "type": "object",
             "properties": {
-            "reentrant": {
-                "type": "boolean"
-            },
-            "inline": {
-                "type": "boolean"
-            }
+                "reentrant": {
+                    "type": "boolean"
+                },
+                "inline": {
+                    "type": "boolean"
+                }
             }
         },
         "controls": {
@@ -35,11 +34,15 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                    "type": "string"
+                        "type": "string"
                     },
                     "type": {
-                    "type": "string",
-                    "enum": ["button", "led", "numeric"]
+                        "type": "string",
+                        "enum": [
+                            "button",
+                            "led",
+                            "numeric"
+                        ]
                     },
                     "is_indicator": {
                         "type": "boolean"
@@ -53,11 +56,20 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                    "type": "string"
+                        "type": "string"
                     },
                     "type": {
-                    "type": "string",
-                    "enum": ["while_loop", "numeric_constant", "wait_ms", "control_terminal", "loop_return_selector", "not", "control_terminal", "loop_iteration", "read_local"]
+                        "type": "string",
+                        "enum": [
+                            "while_loop",
+                            "numeric_constant",
+                            "wait_ms",
+                            "control_terminal",
+                            "loop_return_selector",
+                            "not",
+                            "loop_iteration",
+                            "read_local"
+                        ]
                     },
                     "is_indicator": {
                         "type": "boolean"
@@ -71,16 +83,18 @@
                 "type": "object",
                 "properties": {
                     "source": {
-                    "type": "object",
-                    "properties": {
-                        "node": {
-                            "type": "string"
+                        "type": "object",
+                        "properties": {
+                            "node": {
+                                "type": "string"
+                            },
+                            "terminal": {
+                                "type": "string"
+                            }
                         },
-                        "terminal": {
-                            "type": "string"
-                        }
-                    },
-                    "required": [ "node" ]
+                        "required": [
+                            "node"
+                        ]
                     },
                     "sinks": {
                         "type": "array",
@@ -94,12 +108,18 @@
                                     "type": "string"
                                 }
                             },
-                            "required": [ "node" ]
+                            "required": [
+                                "node"
+                            ]
                         }
                     }
                 }
             }
         }
     },
-    "required": [ "controls", "nodes", "name" ]
+    "required": [
+        "controls",
+        "nodes",
+        "name"
+    ]
 }

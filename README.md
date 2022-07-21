@@ -3,10 +3,10 @@ Experimental work in possible file formats for storing data-flow programs.
 
 Here is an example of specifying the functional (non-cosmetic) parts of a LabVIEW VI (Virtual Instrument).
 
-[count_up.yml](yml/count_up.yml)
+[count_up.vi.yml](yml/count_up.vi.yml)
 
 ```yaml
-# count_up.yml
+# count_up.vi.yml
 #
 # A simple VI that counts up until the user presses a "Stop" button.
 #
@@ -38,26 +38,22 @@ controls:
     is_indicator: true
 
 nodes:
-
   - name: main_loop
     type: while_loop
-
     iteration_terminal:
       visible: true
 
     diagram:
-
       nodes:
-
         # This value drives the loop rate
         - name: loop_rate
           type: numeric_constant
 
         # Wait MS Timer
-        - type: wait_ms  # use type as name/id if it'll be unique for the VI
+        - type: wait_ms # use type as name/id if it'll be unique for the VI
 
         # Stop Button's terminal on Block Diagram
-        - name: stop_button  # needs to be the same as the control name 
+        - name: stop_button # needs to be the same as the control name
           type: control_terminal # how we know it's a control_terminal type
 
         # While Loop's return selector
@@ -70,23 +66,22 @@ nodes:
           type: not
 
         # LED is_running indicator
-        - name: is_running  # needs to be the same as the control name 
+        - name: is_running # needs to be the same as the control name
           type: control_terminal # how we know it's a control_terminal type
 
         # While Loop's iteration terminal
         - type: loop_iteration
 
         # # A local variable of the "is_running" control
-        # - type: read_local  # should read/write locals be different types?
+        # - type:     # should read/write locals be different types?
         #   control: is_running
-          
-      wires:
 
+      wires:
         - source:
             node: loop_rate
           sinks:
-          - node: wait_ms
-            terminal: milliseconds_to_wait
+            - node: wait_ms
+              terminal: milliseconds_to_wait
 
         - source:
             node: stop_button
@@ -105,6 +100,5 @@ nodes:
             node: loop_iteration
           sinks:
             - node: num_iterations
-
-
+            
 ```

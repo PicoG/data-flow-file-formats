@@ -1,0 +1,9 @@
+{
+    "yaml.schemas": {
+        "/Users/jimkring/JKI/GitHub/PicoG/data-flow-file-formats/yml/vi_lint.json": [
+            "*.vi_yaml",
+            "file:///Users/jimkring/JKI/GitHub/PicoG/data-flow-file-formats/yml/count_up.vi_yml",
+            "file:///Users/jimkring/JKI/GitHub/PicoG/data-flow-file-formats/yml/count_up.vi.yml"
+        ]
+    }
+}
