@@ -1,0 +1,105 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$id": "https://picog.org/vi.schema.json",
+    "title": "vi",
+    "description": "A virtual instrument",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+      "type": {
+        "description": "Type of VI",
+        "type": "array",
+        "items": {
+            "type": "string",
+            "enum": ["virtual_instrument"]
+        }
+        },
+        "name": {
+            "description": "Name of VI",
+            "type": "string"
+        },
+        "execution": {
+            "type": "object",
+            "properties": {
+            "reentrant": {
+                "type": "boolean"
+            },
+            "inline": {
+                "type": "boolean"
+            }
+            }
+        },
+        "controls": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                    "type": "string"
+                    },
+                    "type": {
+                    "type": "string",
+                    "enum": ["button", "led", "numeric"]
+                    },
+                    "is_indicator": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                    "type": "string"
+                    },
+                    "type": {
+                    "type": "string",
+                    "enum": ["while_loop", "numeric_constant", "wait_ms", "control_terminal", "loop_return_selector", "not", "control_terminal", "loop_iteration", "read_local"]
+                    },
+                    "is_indicator": {
+                        "type": "boolean"
+                    }
+                }
+            }
+        },
+        "wires": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "source": {
+                    "type": "object",
+                    "properties": {
+                        "node": {
+                            "type": "string"
+                        },
+                        "terminal": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [ "node" ]
+                    },
+                    "sinks": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "node": {
+                                    "type": "string"
+                                },
+                                "terminal": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [ "node" ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [ "controls", "nodes", "name" ]
+}
