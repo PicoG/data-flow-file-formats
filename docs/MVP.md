@@ -39,4 +39,5 @@ Benefits:
 - Could run this in the cloud
 
 ### Robust YAML libary for LabVIEW
-Not sure how robut the [nicolas_bats_lib_yaml_parser](https://www.vipm.io/package/nicolas_bats_lib_yaml_parser/)) library is. It would be great to have a more robust library for reading/writing YAML as the G YAML format and tools evolve.
+- Not sure how robust the [nicolas_bats_lib_yaml_parser](https://www.vipm.io/package/nicolas_bats_lib_yaml_parser/) library is.
+- It would be great to have a more robust library for reading/writing YAML as the G YAML format and tools evolve.
