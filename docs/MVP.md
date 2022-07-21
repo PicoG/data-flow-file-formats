@@ -8,6 +8,7 @@
 ## What's Needed
 The following items are needed to complete the objectives.
 ### G YAML Schema (Define YAML Schema for G)
+- See here [vi_lint.json](../yml/vi_lint.json)
 - **JSON Schema** will be used for implementing the schema.
 - Allows validation and easier editing of *.g.yaml in Visual Studio Code.
 - Can be served up to users via a URL (vscode will pull from the server)
